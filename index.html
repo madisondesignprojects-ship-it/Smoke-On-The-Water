@@ -14,6 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/storefront-day-2.webp">
 <link rel="preload" as="image" href="img/storefront-night.webp">
 <link rel="stylesheet" href="css/styles.css">
 <script type="application/ld+json">
@@ -57,6 +58,7 @@
       <span class="brand__loc">Stoughton, WI</span>
     </a>
     <nav class="nav" id="nav" aria-label="Main">
+      <a href="#pens">Pens</a>
       <a href="#shop">Shop</a>
       <a href="#floors">The Store</a>
       <a href="#story">Our Story</a>
@@ -73,11 +75,9 @@
 <main id="main">
 <!-- HERO -->
 <section class="hero">
-  <picture class="hero__bg">
-    <img src="img/storefront-night.webp" alt="The Smokes on the Water storefront at night, its neon windows glowing over the Yahara River in downtown Stoughton" fetchpriority="high">
-  </picture>
   <div class="hero__smoke" aria-hidden="true"></div>
   <div class="wrap hero__in">
+   <div class="hero__copy">
     <p class="eyebrow">Downtown Stoughton · Since 2017</p>
     <h1>Stoughton's smoke &amp; vape shop, <span class="lime">right on the water.</span></h1>
     <p class="hero__lead">Three floors of vapes, e-liquid, disposables, glass, legal hemp &amp; Delta, CBD, handmade jewelry and gifts, with a friendly, knowledgeable crew and a view of the Yahara River.</p>
@@ -92,8 +92,78 @@
       <li><strong>233 W Main</strong><span>On the Yahara</span></li>
       <li><strong>21+</strong><span>ID checked always</span></li>
     </ul>
+   </div>
+    <div class="daynight" aria-label="Our storefront by day and by night">
+      <figure class="dn dn--day">
+        <img src="img/storefront-day-2.webp" alt="The Smokes on the Water storefront on W Main St in daylight, with its porch entrance and window signs" fetchpriority="high" width="1600" height="1531">
+        <figcaption><span class="dn__icon" aria-hidden="true">☀</span><strong>Stocked by day.</strong><small>Doors open 10am</small></figcaption>
+      </figure>
+      <figure class="dn dn--night">
+        <img src="img/storefront-night.webp" alt="The Smokes on the Water storefront at night, its neon windows glowing in downtown Stoughton" fetchpriority="high" width="1340" height="1600">
+        <figcaption><span class="dn__icon" aria-hidden="true">☾</span><strong>Smokin&rsquo; by night.</strong><small>Neon&rsquo;s on till 9pm</small></figcaption>
+      </figure>
+    </div>
   </div>
   <svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40c120-30 240-30 360 0s240 30 360 0 240-30 360 0 240 30 360 0v40H0z"/></svg>
+</section>
+
+<!-- PEN MENU -->
+<section class="section pens" id="pens">
+  <div class="wrap">
+    <div class="pens__head">
+      <div class="section__head">
+        <p class="eyebrow">On the pen menu</p>
+        <h2>Want a pen? <span class="lime">We&rsquo;ve got plenty.</span></h2>
+        <p class="muted">All-in-one disposables and 510-thread carts from the names you keep asking for, front and center at our street-level counter. Here&rsquo;s a taste of the lineup. The menu moves fast, so ask the counter what&rsquo;s fresh today.</p>
+      </div>
+      <ul class="pens__legend" aria-label="Pen styles">
+        <li><strong>Disposables</strong><span>Grab, puff, go. No battery needed.</span></li>
+        <li><strong>510 Carts</strong><span>Screw onto any standard 510 battery.</span></li>
+      </ul>
+    </div>
+    <div class="pens__grid">
+      <article class="pen">
+        <div class="pen__stage"><img src="img/pen-halfbakd-angel-food.webp" alt="HALF BAK&rsquo;D SAUCE&rsquo;D Exotix Angel Food 4G disposable vape and box" width="640" height="640" loading="lazy"></div>
+        <div class="pen__body">
+          <p class="pen__brand">Half Bak&rsquo;d <span>Disposable</span></p>
+          <h3>Angel Food</h3>
+          <ul class="pen__tags"><li>4G</li><li>Sativa</li><li>SAUCE&rsquo;D Exotix</li></ul>
+        </div>
+      </article>
+      <article class="pen">
+        <div class="pen__stage"><img src="img/pen-halfbakd-pink-picasso.webp" alt="HALF BAK&rsquo;D SAUCE&rsquo;D Pink Picasso 4G disposable vape and box" width="640" height="640" loading="lazy"></div>
+        <div class="pen__body">
+          <p class="pen__brand">Half Bak&rsquo;d <span>Disposable</span></p>
+          <h3>Pink Picasso</h3>
+          <ul class="pen__tags"><li>4G</li><li>Hybrid</li><li>SAUCE&rsquo;D</li></ul>
+        </div>
+      </article>
+      <article class="pen">
+        <div class="pen__stage"><img src="img/pen-21-black-lime.webp" alt="Twenty One Cannabis Black Lime THCa 1ml vape cartridge box" width="640" height="640" loading="lazy"></div>
+        <div class="pen__body">
+          <p class="pen__brand">21 Cannabis <span>510 Cart</span></p>
+          <h3>Black Lime</h3>
+          <ul class="pen__tags"><li>1ml</li><li>Indica</li><li>THCa</li></ul>
+        </div>
+      </article>
+      <article class="pen">
+        <div class="pen__stage"><img src="img/pen-21-cookie-monster.webp" alt="Twenty One Cannabis Cookie Monster THCa 1ml vape cartridge box" width="640" height="640" loading="lazy"></div>
+        <div class="pen__body">
+          <p class="pen__brand">21 Cannabis <span>510 Cart</span></p>
+          <h3>Cookie Monster</h3>
+          <ul class="pen__tags"><li>1ml</li><li>Indica</li><li>THCa</li></ul>
+        </div>
+      </article>
+    </div>
+    <div class="pens__cta">
+      <p><strong>Shelf changes daily.</strong> Call ahead and we&rsquo;ll tell you what&rsquo;s in stock, or swing by and the counter crew will walk you through it.</p>
+      <div class="pens__btns">
+        <a class="btn btn--lime" href="tel:+16082056868">Call the counter</a>
+        <a class="btn btn--ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=233+W+Main+St+Stoughton+WI+53589" target="_blank" rel="noopener">Get directions</a>
+      </div>
+    </div>
+    <p class="pens__fine">21+ with valid ID. Hemp-derived products; selection and availability vary. Brand packaging shown for reference; in-store pricing may differ from what&rsquo;s printed on the box.</p>
+  </div>
 </section>
 
 <!-- SHOP CATEGORIES -->
@@ -185,7 +255,7 @@
       <h2>Inside Smokes on the Water</h2>
     </div>
     <div class="gallery">
-      <button class="g g--tall" data-full="img/storefront-night-wide.webp"><img src="img/storefront-night-wide-sm.webp" alt="Storefront glowing at night" loading="lazy"></button>
+      <button class="g g--tall" data-full="img/storefront-night-wide.webp"><img src="img/storefront-night-wide-sm.webp" alt="Lit glass display cases inside the shop" loading="lazy"></button>
       <button class="g" data-full="img/interior-counter.webp"><img src="img/interior-counter-sm.webp" alt="Main floor display counters" loading="lazy"></button>
       <button class="g" data-full="img/welcome-snacks.webp"><img src="img/welcome-snacks-sm.webp" alt="Welcome sign above the exotic snacks and drinks coolers" loading="lazy"></button>
       <button class="g g--wide" data-full="img/disposables-wall.webp"><img src="img/disposables-wall-sm.webp" alt="Disposable vape wall" loading="lazy"></button>

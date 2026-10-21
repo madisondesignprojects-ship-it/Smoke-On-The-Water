@@ -15,3 +15,11 @@ Preview: `python3 -m http.server` in this folder, then open http://localhost:800
 - Nicotine warning text in the footer is a suggested compliance line; confirm with the owner
 - Review count/rating changes over time; pull it live in production
 - Map is an OpenStreetMap embed (no API key); swap for a Google Maps embed in production if preferred
+
+## Pen menu section (#pens) image sources
+- Half Bak'd (official, half-bakd.com): Angel Food 4G Sativa Disposable (SAUCE'D Exotix), https://half-bakd.com/cdn/shop/files/Dispo_angel_food_02_bd2309b8-27cd-4c56-ae39-d40aa40c993c.png ; Pink Picasso 4G Hybrid Disposable, https://half-bakd.com/cdn/shop/files/Pink_piccaso_02.png
+- Twenty One Cannabis (official, twentyonecannabis.com): THCa 1ml Vape Cartridge, Black Lime (Indica), https://twentyonecannabis.com/wp-content/uploads/2024/10/black-lime-front-21-THCa-1ml-cart-9.99.webp ; Cookie Monster (Indica), https://twentyonecannabis.com/wp-content/uploads/2024/10/cookie-monster-front-21-THCa-1ml-cart-9.99.webp
+- Confirm with the owner which pens are actually stocked; packaging shows a printed $9.99 MSRP on the 21 carts.
+
+## Hero day/night
+Uses the store's own photos from the Wix site: img/storefront-day-2.webp (day) and img/storefront-night.webp (night). Captions: "Stocked by day." / "Smokin' by night."
