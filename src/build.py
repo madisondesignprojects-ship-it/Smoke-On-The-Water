@@ -16,34 +16,35 @@ STORES = [
       tagline='Three floors on the Yahara River',
       blurb='Our second shop sits in Stoughton&rsquo;s historic downtown, easy to reach from Main Street, with a gorgeous view over the Yahara River and quaint shops, local eateries and museums all around.',
       more='Street level has an extensive selection of devices and accessories, a nic juice bar, hundreds of disposable nicotine and Delta options, concentrates, edibles and exotic snacks. Upstairs: a killer glass selection, torches, ashtrays and maintenance supplies. Downstairs: incense, candles, detox, CBD, house-made jewelry, apparel and so much more.',
-      amen=['&#9855; Wheelchair-accessible entrance', '&#128179; Credit, debit &amp; tap-to-pay', '&#129706; 21+ with valid ID'],
+      amen=['&#9855; Wheelchair-accessible entrance', '&#127359;&#65039; Accessible parking lot', '&#128179; Credit, debit &amp; tap-to-pay', '&#129706; 21+ with valid ID'],
+      greviews='https://www.google.com/search?q=smokes+on+the+water+stoughton+wi#lrd=0x88064643d06f622d:0xe3076a142ee1569f,1,,,,',
       cover='storefront-day-2', photos=[('storefront-night','Storefront glowing at night'),('interior-counter','Main floor display counters'),('welcome-snacks','Wall of disposables and e-liquid'),('storefront-night-wide','Lit glass display cases'),('glass-case','Welcome sign over the snacks and drinks coolers'),('interior-accessories','Accessories and gifts display'),('vape-wall','Vape devices and pods wall'),('disposables-wall','The storefront from the street at night')]),
  dict(slug='beaver-dam', town='Beaver Dam', street='501 N Spring Street', street_short='501 N Spring St', zip='53916',
       phone='(920) 219-9580', tel='+19202199580', email='smokesonthewater.bd@gmail.com',
       lat=43.46065, lon=-88.83668, since='Since 2017', since_year='2017',
-      fb='https://www.facebook.com/SmokesonthewaterBD/', yelp='https://www.yelp.com/biz/smokes-on-the-water-beaver-dam',
+      fb='https://www.facebook.com/SmokesonthewaterBD/', greviews='https://www.google.com/search?q=smokes+on+the+water+beaver+dam+wi#lrd=0x88069f13abe8092f:0x617701e6f30dde8a,1,,,,', yelp='https://www.yelp.com/biz/smokes-on-the-water-beaver-dam',
       tagline='Where it all started',
       blurb='Smokes on the Water BD sits in the heart of Beaver Dam, a city known for its lake and lively community, surrounded by local businesses. The original Smokes on the Water, serving Beaver Dam since 2017.',
       more='A broad spectrum of products and a staff with a wealth of knowledge make this shop a hub for the local vaping community, whether you&rsquo;re a seasoned vaper or just getting started.',
-      amen=['&#129706; 21+ with valid ID'],
+      amen=['&#9855; Wheelchair-accessible entrance', '&#127359;&#65039; Accessible parking lot', '&#129706; 21+ with valid ID'],
       cover='loc-beaver-dam-1', photos=[('loc-beaver-dam-2','Disposables and display cases'),('loc-beaver-dam-3','Main counter and back-wall shelving'),('loc-beaver-dam-4','Displays and coolers'),('loc-beaver-dam-5','Sales floor with product tower')]),
  dict(slug='horicon', town='Horicon', street='309 E Lake Street', street_short='309 E Lake St', zip='53032',
       phone='(920) 643-7155', tel='+19206437155', email='smokesonthewater.bd@gmail.com',
       lat=43.45145, lon=-88.63227, since='Since 2022', since_year='2022',
-      fb='https://www.facebook.com/SOWhoricon', yelp='https://www.yelp.com/biz/smokes-on-the-water-horicon',
+      fb='https://www.facebook.com/SOWhoricon', greviews='https://www.google.com/search?q=smokes+on+the+water+horicon+wi#lrd=0x88043d3281b61175:0x9b3713f42a54612c,1,,,,', yelp='https://www.yelp.com/biz/smokes-on-the-water-horicon',
       tagline='Dodge County&rsquo;s neighborhood shop',
       blurb='The go-to smoke shop in Horicon since 2022. From vapes and e-juice to tobacco products and jewelry, there&rsquo;s something for everyone.',
       more='We&rsquo;re dedicated to giving Horicon, Dodge County and the surrounding area exceptional customer service and quality products at affordable prices. Stop in and check it out.',
-      amen=['&#129706; 21+ with valid ID'],
+      amen=['&#9855; Wheelchair-accessible entrance', '&#127359;&#65039; Accessible parking lot', '&#129706; 21+ with valid ID'],
       cover='loc-horicon-1', photos=[('loc-horicon-2','Display counter and shelving'),('loc-horicon-3','Glass and accessories cases'),('loc-horicon-4','Apparel and accessories wall'),('loc-horicon-5','Lit display cases')]),
  dict(slug='oregon', town='Oregon', street='201 Janesville Street', street_short='201 Janesville St', zip='53575',
       phone='(608) 608-1081', tel='+16086081081', email='smokesonthewater.or@gmail.com',
       lat=42.92528, lon=-89.38319, since='Opened Feb 2025', since_year='2025',
-      fb='https://www.facebook.com/profile.php?id=61572636715172', yelp=None,
+      fb='https://www.facebook.com/profile.php?id=61572636715172', greviews='https://www.google.com/search?q=smokes+on+the+water+oregon+wi#lrd=0x88064b86d458c10b:0xb63d3913a06e5fb1,1,,,,', yelp=None,
       tagline='The newest shop in the family',
       blurb='Our fourth location opened in February 2025 at 201 Janesville Street in beautiful downtown Oregon.',
       more='Vapes, legal hemp, edibles, glass, accessories, gifts and more, with the same friendly, knowledgeable crew you&rsquo;ll find at every Smokes on the Water.',
-      amen=['&#129706; 21+ with valid ID'],
+      amen=['&#9855; Wheelchair-accessible entrance', '&#127359;&#65039; Accessible parking lot', '&#129706; 21+ with valid ID'],
       cover='loc-oregon-1', photos=[('loc-oregon-2','Sales floor and entry mat'),('loc-oregon-3','Disposable vape wall'),('loc-oregon-4','Product tower by the entrance'),('loc-oregon-5','Lit vape display cases')]),
 ]
 for s in STORES:
@@ -202,7 +203,8 @@ def footer(R, store=None):
     <nav aria-label="Footer"><h4>Shop</h4><a href="https://www.smokesonthewaterwi.com/shop">Shop online</a><a href="https://www.smokesonthewaterwi.com/all-products">All products</a><a href="https://www.smokesonthewaterwi.com/shipping-returns">Shipping &amp; Returns</a><a href="https://www.smokesonthewaterwi.com/copy-of-terms-conditions">Terms &amp; Conditions</a><a href="{R}locations/">All locations</a></nav>
   </div>
   <div class="wrap legal">
-    <p><strong>WARNING:</strong> Nicotine products contain nicotine. Nicotine is an addictive chemical. For sale to adults 21+ only.</p>
+    <p><strong>WARNING:</strong> This product contains nicotine. Nicotine is an addictive chemical.</p>
+    <p>For sale to adults 21+ only. Valid ID required for every purchase.</p>
     <p><strong>FDA Disclaimer:</strong> The statements made within this website have not been evaluated by the Food and Drug Administration. These statements and the products of this company are not intended to diagnose, treat, cure or prevent any disease.</p>
     <p class="muted">© <span id="yr">2026</span> Smokes on the Water. All rights reserved.</p>
   </div>
@@ -211,7 +213,7 @@ def footer(R, store=None):
 {bar}
 {picker(R)}
 
-<dialog class="lightbox" id="lightbox"><button class="lightbox__x" aria-label="Close">×</button><img alt=""></dialog>
+<dialog class="lightbox" id="lightbox" aria-label="Photo viewer"><button class="lightbox__x" aria-label="Close">×</button></dialog>
 
 <script src="{R}js/main.js" defer></script>
 </body>
@@ -228,6 +230,7 @@ def store_card(s, R):
           <p class="store__addr">{s["street"]}<br>{s["city"]}</p>
           <p class="store__hours"><span class="dot"></span> Open daily 10am–9pm</p>
           <a class="store__tel" href="tel:{s["tel"]}">{SVG["phone"]}{s["phone"]}</a>
+          <a class="store__rev" href="{s["greviews"]}" target="_blank" rel="noopener">&#9733; Read our Google reviews</a>
           <div class="store__btns">
             <a class="btn btn--lime btn--sm" href="{s["dir"]}" target="_blank" rel="noopener">Directions</a>
             <a class="btn btn--ghost btn--sm" href="{R}locations/{s["slug"]}.html">Store page →</a>
@@ -279,8 +282,8 @@ REVIEWS = '''
       </figure>
       <figure class="review">
         <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-        <blockquote>“Always the best customer service! Very knowledgeable and honest on all products! They always have the latest and greatest products. Also, a great loyalty program and awesome sales/deals.”</blockquote>
-        <figcaption>Valerie P. · Yelp · <a href="{R}locations/stoughton.html">Stoughton</a></figcaption>
+        <blockquote>“Friendly and knowledgeable… tons of choices. Great prices and good operating hours.”</blockquote>
+        <figcaption>Murray M. · Yelp · <a href="{R}locations/stoughton.html">Stoughton</a></figcaption>
       </figure>
     </div>
   </div>
@@ -297,7 +300,7 @@ FAQ = '''
     <details><summary>What are your hours?</summary><p>All four shops are open every day, 10am–9pm.</p></details>
     <details><summary>Can you order something you don't carry?</summary><p>Usually, yes. We're always expanding our inventory and are happy to bring in items on request. Just ask at the counter or call your local shop.</p></details>
     <details><summary>Do you ship online orders?</summary><p>Yes. Shop online at our store, and orders over $100 ship free. See our <a href="https://www.smokesonthewaterwi.com/shipping-returns">Shipping &amp; Returns</a> policy for details.</p></details>
-    <details><summary>What payment do you accept?</summary><p>Credit and debit cards, plus tap-to-pay at our Stoughton shop. Call your local shop to confirm what it accepts.</p></details>
+    <details><summary>Are your shops accessible?</summary><p>Yes. All four shops have a wheelchair-accessible entrance and accessible parking.</p></details>
   </div>
 </section>
 '''
@@ -396,7 +399,7 @@ def home():
         ('loc-oregon-2', 'Sales floor and Smokes on the Water entry mat in Oregon', 'Oregon', ''),
         ('loc-horicon-3', 'Glass and accessories cases in Horicon', 'Horicon', ''),
         ('loc-beaver-dam-3', 'Main counter and back-wall shelving in Beaver Dam', 'Beaver Dam', ''),
-    ], R, 'Inside all four shops', cls='section') + REVIEWS.replace('{R}', R) + P('band.html') + FAQ.replace('{R}', R) + '</main>\n' + footer(R)
+    ], R, 'Inside all four shops', cls='section') + REVIEWS.replace('{R}', R) + P('band.html').replace('{IG}', IG) + FAQ.replace('{R}', R) + '</main>\n' + footer(R)
     out('index.html', body)
 
 # ---------------- LOCATIONS INDEX ----------------
@@ -415,6 +418,7 @@ def locations_index():
           <li><a href="tel:{s["tel"]}">{s["phone"]}</a></li>
           <li><a href="mailto:{s["email"]}">{s["email"]}</a></li>
           <li class="muted">Open daily 10am–9pm</li>
+          <li><a href="{s["greviews"]}" target="_blank" rel="noopener">&#9733; Read our Google reviews</a></li>
         </ul>
         <div class="visit__ctas">
           <a class="btn btn--lime btn--sm" href="{s["dir"]}" target="_blank" rel="noopener">Get directions</a>
@@ -452,7 +456,7 @@ def store_page(s):
     hours = ''.join(f'<tr data-d="{n}"><th>{dn}</th><td>10am – 9pm</td></tr>' for n, dn in days)
     socials = [f'<li><a href="{s["fb"]}" target="_blank" rel="noopener">Facebook: Smokes on the Water {s["town"]}</a></li>']
     if s['yelp']: socials.append(f'<li><a href="{s["yelp"]}" target="_blank" rel="noopener">Yelp reviews</a></li>')
-    socials.append(f'<li><a href="{s["gmap"]}" target="_blank" rel="noopener">Google reviews &amp; listing</a></li>')
+    socials.insert(0, f'<li><a href="{s["greviews"]}" target="_blank" rel="noopener">&#9733; Read our Google reviews</a></li>')
     socials.append(f'<li><a href="{IG}" target="_blank" rel="noopener">@smokesonthewaterwi on Instagram</a></li>')
     amen = ''.join(f'<li>{a}</li>' for a in s['amen'])
     others = ''.join(f'<li><a href="{o["slug"]}.html"><img src="../img/{o["cover"]}-sm.webp" alt="" loading="lazy"><span><strong>{o["town"]}</strong>{o["street_short"]} · {o["phone"]}</span></a></li>' for o in STORES if o is not s)

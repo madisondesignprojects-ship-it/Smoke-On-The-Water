@@ -187,7 +187,6 @@ h3{font-size:1.45rem}
 .signup{display:flex;flex-wrap:wrap;gap:10px}
 .signup input{flex:1 1 220px;min-height:52px;border-radius:999px;border:2px solid var(--ink);padding:0 20px;font:inherit;background:#fff}
 .signup__ok{flex-basis:100%;font-weight:700}
-.ph{display:inline-block;margin-top:10px!important;font-size:.8rem;font-weight:700!important;border:1.5px dashed rgba(11,13,10,.6);border-radius:8px;padding:4px 10px}
 
 /* visit */
 .visit{display:grid;grid-template-columns:1fr 1.15fr;gap:48px;align-items:stretch}
@@ -451,3 +450,8 @@ address{font-style:normal;font-size:1.15rem;margin-bottom:22px}
 .about__lead{max-width:62ch}
 .lrow__map{position:relative}
 .lrow__map iframe{position:absolute;inset:0}
+.store__rev{font-size:.85rem;font-weight:700;text-decoration:none;margin:-8px 0 16px}
+.store__rev:hover{text-decoration:underline}
+.band__cta{display:flex;justify-content:flex-end}
+@media (max-width:1040px){.band__cta{justify-content:flex-start}}
+@media (max-width:720px){.band__cta .btn{width:100%}}

@@ -39,9 +39,12 @@
   // Lightbox
   const lb = $('#lightbox');
   if (lb) {
-    const lbImg = $('img', lb);
+    // The viewer image is created on first open, so the page never holds an empty <img>.
+    let lbImg = null;
     $$('.g').forEach(b => b.addEventListener('click', () => {
-      const i = $('img', b); lbImg.src = b.dataset.full; lbImg.alt = i.alt; lb.showModal();
+      const i = $('img', b);
+      if (!lbImg) { lbImg = document.createElement('img'); lb.appendChild(lbImg); }
+      lbImg.src = b.dataset.full; lbImg.alt = i.alt; lb.showModal();
     }));
     lb.addEventListener('click', e => { if (e.target === lb || e.target.classList.contains('lightbox__x')) lb.close(); });
   }
