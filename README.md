@@ -1,6 +1,8 @@
-# Smokes on the Water (Stoughton, WI): redesign mockup
+# Smokes on the Water (4 Wisconsin locations): redesign mockup
 
-Static single-page site: index.html, css/styles.css, js/main.js, img/ (real store photos from the current Wix site, converted to WebP).
+Static site: brand homepage (index.html), Locations page (locations/index.html) and one page per store (locations/stoughton.html, beaver-dam.html, horicon.html, oregon.html). Shared CSS/JS in css/ and js/; real store photos from the current Wix site in img/ (WebP).
+
+**Pages are generated.** Edit store data and templates in `src/build.py` (shared sections live in `src/partials/`), then run `python3 src/build.py` to rewrite the HTML files. Commit the generated HTML; Vercel serves it as-is.
 Preview: `python3 -m http.server` in this folder, then open http://localhost:8000 (add `?nogate` to skip the 21+ age gate).
 
 ## Content sources (all real, nothing invented)
@@ -23,3 +25,20 @@ Preview: `python3 -m http.server` in this folder, then open http://localhost:800
 
 ## Hero day/night
 Uses the store's own photos from the Wix site: img/storefront-day-2.webp (day) and img/storefront-night.webp (night). Captions: "Stocked by day." / "Smokin' by night."
+
+
+## Chain restructure (Oct 2026): store data sources
+All four store pages on smokesonthewaterwi.com (/stoughton, /beaver-dam, /horicon, /copy-of-stoughton = Oregon) list address, phone, email, Facebook/Yelp/Google links and hours (Mon–Sun 10am–9pm). Cross-checked against Google Maps place cards (all four resolve to "Smokes on the Water" at the same addresses) and third-party listings:
+- Stoughton: 233 W Main St, 53589, (608) 205-6868, smokesonthewater.st@gmail.com. "Our second location". Opened Nov 2017 (Stoughton News, 2018).
+- Beaver Dam: 501 N Spring St, 53916, (920) 219-9580, smokesonthewater.bd@gmail.com. "Since 2017" (Nextdoor); first shop (news article). Hours confirmed by Waze/Roadtrippers/Loc8NearMe.
+- Horicon: 309 E Lake St, 53032, (920) 643-7155, email listed on the official page is the Beaver Dam address (smokesonthewater.bd@gmail.com). "Since 2022" (official page). Phone confirmed by LocalityBiz/MapQuest.
+- Oregon: 201 Janesville St, 53575, (608) 608-1081, smokesonthewater.or@gmail.com. Opened Feb 2025 (official page); hours/phone confirmed by Oregon WI Guide, Fivestars, Shisha.com.
+- Coordinates: OpenStreetMap Nominatim geocodes of each address (used for "find my nearest store").
+
+## To confirm with the owner
+- Horicon hours: official site says 10am–9pm daily; LocalityBiz (Google-derived) shows 11am–9pm. Site uses the official hours.
+- Horicon email: official page lists the Beaver Dam inbox; confirm whether Horicon has its own.
+- Oregon has no Yelp link on the official page; omitted.
+- Wix homepage/About still say "three locations"; the redesign says four (Oregon page confirms the fourth).
+- Accessibility/payment details are only verified for Stoughton (Google listing).
+- An old Beaver Dam address (135 Front St) and phone (920) 219-4186 appear on Cannapages; treated as outdated.
