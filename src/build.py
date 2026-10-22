@@ -28,21 +28,12 @@ STORES = [
       more='A broad spectrum of products and a staff with a wealth of knowledge make this shop a hub for the local vaping community, whether you&rsquo;re a seasoned vaper or just getting started.',
       amen=['&#9855; Wheelchair-accessible entrance', '&#127359;&#65039; Accessible parking lot', '&#129706; 21+ with valid ID'],
       cover='loc-beaver-dam-1', photos=[('loc-beaver-dam-2','Disposables and display cases'),('loc-beaver-dam-3','Main counter and back-wall shelving'),('loc-beaver-dam-4','Displays and coolers'),('loc-beaver-dam-5','Sales floor with product tower')]),
- dict(slug='horicon', town='Horicon', street='309 E Lake Street', street_short='309 E Lake St', zip='53032',
-      phone='(920) 643-7155', tel='+19206437155', email='smokesonthewater.bd@gmail.com',
-      lat=43.45145, lon=-88.63227, since='Since 2022', since_year='2022',
-      fb='https://www.facebook.com/SOWhoricon', greviews='https://www.google.com/search?q=smokes+on+the+water+horicon+wi#lrd=0x88043d3281b61175:0x9b3713f42a54612c,1,,,,', yelp='https://www.yelp.com/biz/smokes-on-the-water-horicon',
-      tagline='Dodge County&rsquo;s neighborhood shop',
-      blurb='The go-to smoke shop in Horicon since 2022. From vapes and e-juice to tobacco products and jewelry, there&rsquo;s something for everyone.',
-      more='We&rsquo;re dedicated to giving Horicon, Dodge County and the surrounding area exceptional customer service and quality products at affordable prices. Stop in and check it out.',
-      amen=['&#9855; Wheelchair-accessible entrance', '&#127359;&#65039; Accessible parking lot', '&#129706; 21+ with valid ID'],
-      cover='loc-horicon-1', photos=[('loc-horicon-2','Display counter and shelving'),('loc-horicon-3','Glass and accessories cases'),('loc-horicon-4','Apparel and accessories wall'),('loc-horicon-5','Lit display cases')]),
  dict(slug='oregon', town='Oregon', street='201 Janesville Street', street_short='201 Janesville St', zip='53575',
       phone='(608) 608-1081', tel='+16086081081', email='smokesonthewater.or@gmail.com',
       lat=42.92528, lon=-89.38319, since='Opened Feb 2025', since_year='2025',
       fb='https://www.facebook.com/profile.php?id=61572636715172', greviews='https://www.google.com/search?q=smokes+on+the+water+oregon+wi#lrd=0x88064b86d458c10b:0xb63d3913a06e5fb1,1,,,,', yelp=None,
       tagline='The newest shop in the family',
-      blurb='Our fourth location opened in February 2025 at 201 Janesville Street in beautiful downtown Oregon.',
+      blurb='Our newest shop opened in February 2025 at 201 Janesville Street in beautiful downtown Oregon.',
       more='Vapes, legal hemp, edibles, glass, accessories, gifts and more, with the same friendly, knowledgeable crew you&rsquo;ll find at every Smokes on the Water.',
       amen=['&#9855; Wheelchair-accessible entrance', '&#127359;&#65039; Accessible parking lot', '&#129706; 21+ with valid ID'],
       cover='loc-oregon-1', photos=[('loc-oregon-2','Sales floor and entry mat'),('loc-oregon-3','Disposable vape wall'),('loc-oregon-4','Product tower by the entrance'),('loc-oregon-5','Lit vape display cases')]),
@@ -115,7 +106,7 @@ def head(title, desc, path, og, ld, R):
   <div class="gate__card">
     <img src="{R}img/logo-wordmark.png" alt="Smokes on the Water" width="293" height="32">
     <h2 id="gate-title">Are you 21 or older?</h2>
-    <p>You must be 21+ to browse our shops. We check ID at the door at all four Wisconsin locations, every time.</p>
+    <p>You must be 21+ to browse our shops. We check ID at the door at all three Wisconsin locations, every time.</p>
     <div class="gate__btns">
       <button class="btn btn--lime" id="gate-yes">Yes, I'm 21+</button>
       <a class="btn btn--ghost" href="https://www.google.com">No, take me back</a>
@@ -133,14 +124,14 @@ def header(R, home, store=None):
         cta = f'<a class="btn btn--lime btn--sm header__call" href="{loc_link}">{SVG["pin"]}Find a store</a>'
     return f'''
 <div class="topbar">
-  <p><span class="dot"></span> <span id="open-status">Open daily 10am–9pm</span> <span class="sep">·</span> <a href="{loc_link}">4 Wisconsin locations</a> <span class="sep">·</span> <span class="ship">Free shipping on online orders over $100</span></p>
+  <p><span class="dot"></span> <span id="open-status">Open daily 10am–9pm</span> <span class="sep">·</span> <a href="{loc_link}">3 Wisconsin locations</a> <span class="sep">·</span> <span class="ship">Free shipping on online orders over $100</span></p>
 </div>
 
 <header class="header" id="top">
   <div class="wrap header__in">
     <a href="{R}index.html" class="brand" aria-label="Smokes on the Water home">
       <img src="{R}img/logo-wordmark.png" alt="Smokes on the Water" width="293" height="32">
-      <span class="brand__loc">{store["town"] + ", WI" if store else "Wisconsin · 4 locations"}</span>
+      <span class="brand__loc">{store["town"] + ", WI" if store else "Wisconsin · 3 locations"}</span>
     </a>
     <nav class="nav" id="nav" aria-label="Main">
       <a href="{loc_link}"{' aria-current="page"' if (not home and not store) else ''}>Locations</a>
@@ -195,7 +186,7 @@ def footer(R, store=None):
   <div class="wrap footer__in">
     <div>
       <img src="{R}img/logo-wordmark.png" alt="Smokes on the Water" width="220" height="24" loading="lazy">
-      <p class="muted">Vapes, glass, legal hemp &amp; Delta, CBD, jewelry and gifts. Four Wisconsin shops since 2017: Beaver Dam, Stoughton, Horicon and Oregon.</p>
+      <p class="muted">Vapes, glass, legal hemp &amp; Delta, CBD, jewelry and gifts. Three Wisconsin shops: Beaver Dam, Stoughton and Oregon. Since 2017.</p>
       <p class="muted">Open daily 10am–9pm.</p>
       <a class="ig" href="{IG}" target="_blank" rel="noopener" aria-label="Smokes on the Water on Instagram">{SVG["ig"]}</a>
     </div>
@@ -277,8 +268,8 @@ REVIEWS = '''
       </figure>
       <figure class="review">
         <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-        <blockquote>“Best shop around hands down. Not going to find another store that is either more informational or more helpful. The crew here not only knows what's up but definitely wants to hook you up with what you want.”</blockquote>
-        <figcaption>Codi L. · Google review · <a href="{R}locations/horicon.html">Horicon</a></figcaption>
+        <blockquote>“Staff is amazing… Prices are great for the few products we buy. Would recommend to everyone.”</blockquote>
+        <figcaption>Google review · <a href="{R}locations/beaver-dam.html">Beaver Dam</a></figcaption>
       </figure>
       <figure class="review">
         <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
@@ -296,11 +287,11 @@ FAQ = '''
   <div class="wrap faq">
     <div class="section__head"><p class="eyebrow">Good to know</p><h2>FAQ</h2></div>
     <details><summary>Do I need an ID?</summary><p>Yes. You must be 21 or older, and we check ID for every purchase at every location.</p></details>
-    <details><summary>Where are your stores?</summary><p>Four Wisconsin shops: Beaver Dam (501 N Spring St), Stoughton (233 W Main St), Horicon (309 E Lake St) and Oregon (201 Janesville St). See <a href="{R}locations/">all locations</a> for maps and directions.</p></details>
-    <details><summary>What are your hours?</summary><p>All four shops are open every day, 10am–9pm.</p></details>
+    <details><summary>Where are your stores?</summary><p>Three Wisconsin shops: Beaver Dam (501 N Spring St), Stoughton (233 W Main St) and Oregon (201 Janesville St). See <a href="{R}locations/">all locations</a> for maps and directions.</p></details>
+    <details><summary>What are your hours?</summary><p>All three shops are open every day, 10am–9pm.</p></details>
     <details><summary>Can you order something you don't carry?</summary><p>Usually, yes. We're always expanding our inventory and are happy to bring in items on request. Just ask at the counter or call your local shop.</p></details>
     <details><summary>Do you ship online orders?</summary><p>Yes. Shop online at our store, and orders over $100 ship free. See our <a href="https://www.smokesonthewaterwi.com/shipping-returns">Shipping &amp; Returns</a> policy for details.</p></details>
-    <details><summary>Are your shops accessible?</summary><p>Yes. All four shops have a wheelchair-accessible entrance and accessible parking.</p></details>
+    <details><summary>Are your shops accessible?</summary><p>Yes. All three shops have a wheelchair-accessible entrance and accessible parking.</p></details>
   </div>
 </section>
 '''
@@ -329,8 +320,8 @@ def out(path, content):
 # ---------------- HOME ----------------
 def home():
     R = ''
-    t = 'Smokes on the Water | Smoke &amp; Vape Shops in Stoughton, Beaver Dam, Horicon &amp; Oregon, WI'
-    d = 'Smokes on the Water: four Wisconsin smoke and vape shops in Beaver Dam, Stoughton, Horicon and Oregon. Vapes, e-liquid, disposables, glass, legal hemp/Delta, CBD, jewelry and gifts. Open daily 10am–9pm. 21+.'
+    t = 'Smokes on the Water | Smoke &amp; Vape Shops in Beaver Dam, Stoughton &amp; Oregon, WI'
+    d = 'Smokes on the Water: three Wisconsin smoke and vape shops in Beaver Dam, Stoughton and Oregon. Vapes, e-liquid, disposables, glass, legal hemp/Delta, CBD, jewelry and gifts. Open daily 10am–9pm. 21+.'
     body = head(t, d, '', 'storefront-night', jsonld([ORG] + [store_ld(s) for s in STORES]), R) + header(R, True) + f'''
 <main id="main">
 <!-- HERO -->
@@ -339,20 +330,20 @@ def home():
   <div class="wrap hero__in">
    <div class="hero__copy">
     <p class="eyebrow">Wisconsin-owned · Since 2017</p>
-    <h1>Wisconsin's smoke &amp; vape shop, <span class="lime">four towns deep.</span></h1>
-    <p class="hero__lead">Vapes, e-liquid, disposables, glass, legal hemp &amp; Delta, CBD, handmade jewelry and gifts in Beaver Dam, Stoughton, Horicon and Oregon, each run by a friendly, knowledgeable crew.</p>
+    <h1>Wisconsin's smoke &amp; vape shop, <span class="lime">three towns strong.</span></h1>
+    <p class="hero__lead">Vapes, e-liquid, disposables, glass, legal hemp &amp; Delta, CBD, handmade jewelry and gifts in Beaver Dam, Stoughton and Oregon, each run by a friendly, knowledgeable crew.</p>
     <div class="hero__ctas">
       <a class="btn btn--lime btn--lg" href="#locations">{SVG["pin"]}Find your store</a>
       <button class="btn btn--ghost btn--lg" type="button" data-pick="call">Call a shop</button>
       <a class="btn btn--text btn--lg" href="https://www.smokesonthewaterwi.com/shop">Shop online →</a>
     </div>
     <ul class="hero__facts">
-      <li><strong>4 shops</strong><span>Across Wisconsin</span></li>
+      <li><strong>3 shops</strong><span>Across Wisconsin</span></li>
       <li><strong>10am–9pm</strong><span>Open 7 days</span></li>
       <li><strong>Since 2017</strong><span>Locally owned</span></li>
       <li><strong>21+</strong><span>ID checked always</span></li>
     </ul>
-    <p class="hero__towns"><a href="locations/beaver-dam.html">Beaver Dam</a><a href="locations/stoughton.html">Stoughton</a><a href="locations/horicon.html">Horicon</a><a href="locations/oregon.html">Oregon</a></p>
+    <p class="hero__towns"><a href="locations/beaver-dam.html">Beaver Dam</a><a href="locations/stoughton.html">Stoughton</a><a href="locations/oregon.html">Oregon</a></p>
    </div>
     <div class="daynight" aria-label="Our shops by day and by night">
       <figure class="dn dn--day">
@@ -367,7 +358,7 @@ def home():
   </div>
   <svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40c120-30 240-30 360 0s240 30 360 0 240-30 360 0 240 30 360 0v40H0z"/></svg>
 </section>
-''' + finder(R, 'Four shops. <span class="lime">Pick yours.</span>', 'Same crew mentality, same 10am–9pm hours, every day of the week. Tap a store for photos, maps and the full scoop.') + P('pens.html').replace('{R}', R) + P('shop.html').replace('{R}', R) + f'''
+''' + finder(R, 'Three shops. <span class="lime">Pick yours.</span>', 'Same crew mentality, same 10am–9pm hours, every day of the week. Tap a store for photos, maps and the full scoop.') + P('pens.html').replace('{R}', R) + P('shop.html').replace('{R}', R) + f'''
 <!-- STORY -->
 <section class="section section--alt" id="story">
   <div class="wrap story">
@@ -379,11 +370,10 @@ def home():
       <p class="eyebrow">Our story</p>
       <h2>Named for the river (and the riff)</h2>
       <p>Smokes on the Water started in Beaver Dam in 2017. That November we opened shop number two on West Main Street in Stoughton, in a multi-level building on the Yahara River, and the name says it all: a nod to the classic Deep Purple song. Founder Chris Kelley wanted small towns with real demand, and Wisconsin delivered.</p>
-      <p>Horicon joined the family in 2022, and Oregon became shop number four in February 2025. The idea hasn&rsquo;t changed: a welcoming, inclusive shop with friendly, knowledgeable staff, competitive prices, and a crew that helps you find exactly what you need, whether you&rsquo;re a seasoned vaper or brand new.</p>
+      <p>Oregon joined the family in February 2025. The idea hasn&rsquo;t changed: a welcoming, inclusive shop with friendly, knowledgeable staff, competitive prices, and a crew that helps you find exactly what you need, whether you&rsquo;re a seasoned vaper or brand new.</p>
       <ol class="timeline">
         <li><strong>2017</strong><a href="locations/beaver-dam.html">Beaver Dam</a></li>
         <li><strong>Nov 2017</strong><a href="locations/stoughton.html">Stoughton</a></li>
-        <li><strong>2022</strong><a href="locations/horicon.html">Horicon</a></li>
         <li><strong>Feb 2025</strong><a href="locations/oregon.html">Oregon</a></li>
       </ol>
       <p class="rules"><strong>Our two house rules:</strong> we check IDs, and we keep it legal.</p>
@@ -393,20 +383,21 @@ def home():
 ''' + gallery([
         ('storefront-night-wide', 'Lit glass display cases at the Stoughton shop', 'Stoughton', 'g--tall'),
         ('loc-beaver-dam-1', 'Sales floor at the Beaver Dam shop', 'Beaver Dam', 'g--wide'),
-        ('loc-horicon-1', 'Shelving and counter at the Horicon shop', 'Horicon', ''),
+        ('loc-oregon-5', 'Lit vape display cases at the Oregon shop', 'Oregon', ''),
         ('loc-oregon-3', 'Disposable vape wall at the Oregon shop', 'Oregon', ''),
         ('welcome-snacks', 'Wall of disposables and e-liquid at the Stoughton shop', 'Stoughton', 'g--wide'),
         ('loc-oregon-2', 'Sales floor and Smokes on the Water entry mat in Oregon', 'Oregon', ''),
-        ('loc-horicon-3', 'Glass and accessories cases in Horicon', 'Horicon', ''),
+        ('loc-beaver-dam-4', 'Displays and coolers at the Beaver Dam shop', 'Beaver Dam', ''),
         ('loc-beaver-dam-3', 'Main counter and back-wall shelving in Beaver Dam', 'Beaver Dam', ''),
-    ], R, 'Inside all four shops', cls='section') + REVIEWS.replace('{R}', R) + P('band.html').replace('{IG}', IG) + FAQ.replace('{R}', R) + '</main>\n' + footer(R)
+        ('loc-oregon-4', 'Product tower by the entrance at the Oregon shop', 'Oregon', ''),
+    ], R, 'Inside all three shops', cls='section') + REVIEWS.replace('{R}', R) + P('band.html').replace('{IG}', IG) + FAQ.replace('{R}', R) + '</main>\n' + footer(R)
     out('index.html', body)
 
 # ---------------- LOCATIONS INDEX ----------------
 def locations_index():
     R = '../'
-    t = 'Locations | Smokes on the Water: 4 Wisconsin Smoke &amp; Vape Shops'
-    d = 'Find your nearest Smokes on the Water: Beaver Dam, Stoughton, Horicon and Oregon, WI. Addresses, phone numbers, hours, maps and directions. Open daily 10am–9pm.'
+    t = 'Locations | Smokes on the Water: 3 Wisconsin Smoke &amp; Vape Shops'
+    d = 'Find your nearest Smokes on the Water: Beaver Dam, Stoughton and Oregon, WI. Addresses, phone numbers, hours, maps and directions. Open daily 10am–9pm.'
     rows = ''.join(f'''
     <article class="lrow" id="{s["slug"]}">
       <a class="lrow__img" href="{s["slug"]}.html"><img src="../img/{s["cover"]}-sm.webp" alt="Smokes on the Water {s["town"]}" loading="lazy"><span class="store__since">{s["since"]}</span></a>
@@ -433,9 +424,9 @@ def locations_index():
 <section class="phead">
   <div class="wrap">
     <p class="crumbs"><a href="../index.html">Home</a> / Locations</p>
-    <p class="eyebrow">4 Wisconsin locations</p>
+    <p class="eyebrow">3 Wisconsin locations</p>
     <h1>Find your <span class="lime">Smokes on the Water.</span></h1>
-    <p class="hero__lead">Beaver Dam, Stoughton, Horicon and Oregon. Every shop is open daily 10am–9pm and checks ID at the door.</p>
+    <p class="hero__lead">Beaver Dam, Stoughton and Oregon. Every shop is open daily 10am–9pm and checks ID at the door.</p>
   </div>
 </section>
 ''' + finder(R, 'Closest shop to you', 'Tap the button and we&rsquo;ll sort the shops by distance.', 'Store finder', 'section section--tight', 'finder') + f'''
@@ -530,3 +521,4 @@ def store_page(s):
 if __name__ == '__main__':
     home(); locations_index()
     for s in STORES: store_page(s)
+    out('locations/horicon.html', '<!doctype html>\n<html lang="en"><head><meta charset="utf-8"><title>Smokes on the Water locations</title><meta name="robots" content="noindex"><link rel="canonical" href="'+SITE+'locations/"><meta http-equiv="refresh" content="0; url=./"></head><body><p><a href="./">See our locations</a></p></body></html>\n')

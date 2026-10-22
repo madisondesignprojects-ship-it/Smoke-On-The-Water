@@ -1,0 +1,6 @@
+{
+  "redirects": [
+    { "source": "/locations/horicon.html", "destination": "/locations/", "permanent": true },
+    { "source": "/locations/horicon", "destination": "/locations/", "permanent": true }
+  ]
+}

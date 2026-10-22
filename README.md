@@ -1,12 +1,12 @@
-# Smokes on the Water (4 Wisconsin locations): redesign mockup
+# Smokes on the Water (3 Wisconsin locations): redesign mockup
 
-Static site: brand homepage (index.html), Locations page (locations/index.html) and one page per store (locations/stoughton.html, beaver-dam.html, horicon.html, oregon.html). Shared CSS/JS in css/ and js/; real store photos from the current Wix site in img/ (WebP).
+Static site: brand homepage (index.html), Locations page (locations/index.html) and one page per store (locations/stoughton.html, beaver-dam.html, oregon.html). Shared CSS/JS in css/ and js/; real store photos from the current Wix site in img/ (WebP).
 
 **Pages are generated.** Edit store data and templates in `src/build.py` (shared sections live in `src/partials/`), then run `python3 src/build.py` to rewrite the HTML files. Commit the generated HTML; Vercel serves it as-is.
 Preview: `python3 -m http.server` in this folder, then open http://localhost:8000 (add `?nogate` to skip the 21+ age gate).
 
 ## Content sources (all real, nothing invented)
-- smokesonthewaterwi.com: Home, /stoughton, /beaver-dam, /horicon, /copy-of-stoughton (Oregon), /about-us, /shop, /all-products, footer FDA disclaimer, 21+ age gate, free shipping over $100
+- smokesonthewaterwi.com: Home, /stoughton, /beaver-dam, /copy-of-stoughton (Oregon), /about-us, /shop, /all-products, footer FDA disclaimer, 21+ age gate, free shipping over $100
 - Nextdoor business page: "happy to bring in items on request", since 2017
 - Stoughton News / Unified Newspaper Group, Jun 16 2018: opened Nov 2017, founder Chris Kelley, second shop after Beaver Dam, Deep Purple name nod, "we check IDs and keep it legal"
 - Google listing via shisha.com/exa: 4.5★ (~130 reviews), wheelchair-accessible entrance, credit/debit/NFC, Joniahsun review
@@ -23,19 +23,17 @@ Uses the stores' own photos from the Wix site: Oregon storefront (img/loc-oregon
 
 
 ## Chain restructure (Oct 2026): store data sources
-All four store pages on smokesonthewaterwi.com (/stoughton, /beaver-dam, /horicon, /copy-of-stoughton = Oregon) list address, phone, email, Facebook/Yelp/Google links and hours (Mon–Sun 10am–9pm). Cross-checked against Google Maps place cards (all four resolve to "Smokes on the Water" at the same addresses) and third-party listings:
+The store pages on smokesonthewaterwi.com (/stoughton, /beaver-dam, /copy-of-stoughton = Oregon) list address, phone, email, Facebook/Yelp/Google links and hours (Mon–Sun 10am–9pm). Cross-checked against Google Maps place cards (each resolves to "Smokes on the Water" at the same addresses) and third-party listings:
 - Stoughton: 233 W Main St, 53589, (608) 205-6868, smokesonthewater.st@gmail.com. "Our second location". Opened Nov 2017 (Stoughton News, 2018).
 - Beaver Dam: 501 N Spring St, 53916, (920) 219-9580, smokesonthewater.bd@gmail.com. "Since 2017" (Nextdoor); first shop (news article). Hours corroborated by Waze/Roadtrippers/Loc8NearMe.
-- Horicon: 309 E Lake St, 53032, (920) 643-7155, smokesonthewater.bd@gmail.com (as listed on the official page). "Since 2022" (official page). Phone corroborated by LocalityBiz/MapQuest and the store's Facebook page.
 - Oregon: 201 Janesville St, 53575, (608) 608-1081, smokesonthewater.or@gmail.com. Opened Feb 2025 (official page); hours/phone corroborated by Oregon WI Guide, Fivestars, Shisha.com.
 - Coordinates: OpenStreetMap Nominatim geocodes of each address (used for "find my nearest store").
 
 ## Decisions log (Oct 22, 2026)
-- **Horicon hours: 10am–9pm daily.** Source: official store page (smokesonthewaterwi.com/horicon). The store's Facebook page lists no hours (latest post Sep 1, 2025: "Open For Business"); Google Maps shows no hours because the listing is flagged "Permanently closed"; LocalityBiz's 11am–9pm is an older scrape. Horicon stays listed because the business's own site lists it as an active shop.
-- **Horicon email: smokesonthewater.bd@gmail.com.** Source: official Horicon page.
-- **Location count: four.** Source: official store pages (Oregon page: "our fourth location"); the Wix homepage's "three locations" text predates Oregon.
-- **Accessibility: wheelchair-accessible entrance and parking lot at all four shops.** Source: Google Maps "About" tab for each listing (checked Oct 22, 2026).
-- **Payments: credit, debit and tap-to-pay listed for Stoughton only.** Source: Stoughton Google listing; not shown for the other three, so not claimed.
+- **Horicon removed (three-shop chain).** Google Maps lists the Horicon store (309 E Lake St) as "Permanently closed" (checked Oct 22, 2026) and its Facebook page has had no posts since Sep 2025. /locations/horicon.html redirects to /locations/ (vercel.json, plus a meta-refresh fallback page).
+- **Location count: three** (Beaver Dam, Stoughton, Oregon).
+- **Accessibility: wheelchair-accessible entrance and parking lot at all three shops.** Source: Google Maps "About" tab for each listing (checked Oct 22, 2026).
+- **Payments: credit, debit and tap-to-pay listed for Stoughton only.** Source: Stoughton Google listing; not shown for the other two, so not claimed.
 - **Old Beaver Dam address (135 Front St / 920-219-4186): excluded.** Source: appears only on Cannapages; every current listing uses 501 N Spring St.
 - **Google ratings: not hardcoded.** Each store links to its own Google reviews ("Read our Google reviews"), using the review links from the official store pages.
 - **Pens: "stock varies by shop" copy and pricing fine print kept; printed $9.99 cropped out of the 21 Cannabis box photos.**
